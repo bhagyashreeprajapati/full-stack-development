@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia in HTML</title>
+</head>
+<body>
+    <!-- controls is a boolean attribute - if it is present it will be applied -->
+    <!-- Basic video tag -->
+    <!-- <video src="multimedia/big_buck_bunny.mp4" controls></video> -->
+    <!-- WebVTT format - Web Video Text Tracks - for tracks (.vtt files) -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API -->
+    <video src="multimedia/big_buck_bunny.mp4" controls autoplay poster="images/powerplant.jpg">
+        <track default kind="captions" srclang="en" label="English" src="multimedia/captions.vtt" />
+        <track kind="captions" srclang="pt" label="Portuguese" src="multimedia/captions.vtt" />
+    </video>
+
+    <!-- containers versus codecs -->
+    <!-- containers contain 1 track of video, 1 ou more tracks of audio and metadata -->
+    <!-- Example of containers: mp4, ogg/ogv (open-source), webm (Google) -->
+    <!-- video codecs - H.264, HEVC/H.265, VP8/VP9 (Google), Theora, AV1 (AOMedia Video 1) -->
+
+    <video>
+        <source src="multimedia/big_buck_bunny.mp4" type="video/mp4"></source>
+        <source src="multimedia/big_buck_bunny.webm" type="video/webm"></source>
+        <source src="multimedia/big_buck_bunny.ogv" type="video/ogg"></source>
+    </video>
+
+    <audio src="multimedia/audio.mp3" controls></audio>
+    <!-- audio codecs - mp3 (MPEG-1 Layer 3), aac (Advanced Audio Coding), vorbis (open-source), flac, wav (Waveform Audio File - do not use), opus (free open audio codec) -->
+
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7L8p7_SLzvU?si=qbkGzh8QkAJlPPRj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <a href="https://www.welt.de/finanzen/immobilien/plus251028432/Muenchen-Hamburg-oder-Berlin-Hier-ist-die-Lebensqualitaet-am-hoechsten.html">Das Essen-Paradox</a>
+
+    <iframe src="ex4tables.html"></iframe>
+    <object data="ex4tables.html" width="800"></object>
+    <!-- <embed></embed> - used mainly to load Adobe Flash animations/videos -->
+
+    <p><a href="https://maps.app.goo.gl/zK2A4dtZK9JmfmMm7">Hamburg</a></p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d33052.51245381869!2d9.983848831737031!3d53.54583589231059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spt!4v1713168980313!5m2!1sen!2spt" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>
