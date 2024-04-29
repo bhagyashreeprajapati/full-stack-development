@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    max-width: 1400px;
+    margin: auto;
+}
+.title{
+    font-size: 250%;
+    color: #3C368C;
+    text-align: center;
+}
+
+/* Header Css */
+header{
+    background-color: #f5f5f5;
+    padding: 0 20px;
+}
+header .top-header{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+header .top-header form{
+    display: inline-block;
+}
+header .top-header input{
+    border:none;
+    background-color: #fff;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+header .top-header form img{
+    vertical-align: middle;
+}
+header .top-header .search-login{
+    margin-left: auto;
+}
+header .top-header .search-login a{
+    font-weight: bold;
+    color: #1da2dc;
+    text-decoration: none;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+header .top-header .search-login a:hover{
+    color: #a4a3a3;
+}
+header ul{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+header ul li a{
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Banner Css */
+.banner{
+    background-image: url("images/banner.jpg");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 0;
+
+}
+.banner h2{
+    font-size: 30px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.banner p{
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.banner a{
+    font-weight: bold;
+    background-color: #f16248;
+    color: #f5f5f5;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 40px;
+}
+.banner a:hover{
+    background-color: #c8c8c8;
+    color: #252525;
+}
+/* Mission Css */
+.mission{
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #7d7d7d; 
+}
+.mission .mission-content{
+    margin-left: 100px;
+}
+.mission .sub-title{
+    color: #252525;
+    font-weight: bold;
+}
+.mission .mission-content p{
+    color: #7d7d7d;
+}
+.mission .mission-content a{
+    color: #0075be;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:2px solid #fff;
+}
+.mission .mission-content a:hover{
+    border-bottom: 2px solid #7d7d7d;
+    /* text-decoration: underline; */
+}
+.mission .mission-content i{
+    margin-right: 10px;
+}
+
+
+/* Team Css */
+.team{
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.team .team-content img{
+    border-radius: 50%;
+    text-align: center;
+}
+.team .team-content h3{
+    font-size: 125%;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.team .team-content p{
+    margin-top:0;
+    margin-bottom: 0;
+    text-align: center;
+}
+/* Footer Css */
+footer{
+    background-color: #ebebeb;
+    padding: 30px 40px;
+}
+footer .footer-links{
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+footer .footer-sec h4{
+    color: #252525;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+footer .footer-sec li a{
+    color: #7d7d7d;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 1px dotted #ebebeb;
+}
+footer .footer-sec li a:hover{
+    border-bottom: 1px dotted #7d7d7d;
+    color: #000;
+}
+footer .social-icon li{
+    margin-right: 30px;
+    display: inline-block;
+}
+footer .social-icon li a{
+    font-size: 32px;
+    color: #aaa;
+}
+footer .social-icon li a:hover{
+    color: #666;
+}
