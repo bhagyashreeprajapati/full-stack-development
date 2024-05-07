@@ -1,0 +1,151 @@
+@media only screen and (max-width: 1399px) {
+    header{
+        padding: 0 50px;
+    }
+    .mission .mission-content{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .team .team-content img{
+        max-width: 250px;
+    }
+}
+
+
+@media only screen and (max-width: 1099px){
+    header .search-login i{
+        display: inline-block;
+    }
+    header ul{
+        display: none;
+    }
+    .banner{
+        text-align: center;
+        height: 300px;
+        padding: 8px;
+        display: block;
+    }
+    .banner img{
+        display: none;
+    }
+    footer .footer-links{
+        flex-wrap: wrap;
+        column-gap: 0;
+    }
+    footer .footer-sec{
+        flex: 1 1 50%;
+    }
+}
+@media only screen and (max-width: 999px){
+    .mission{
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .mission img{
+        display: block;
+        margin:0 auto 30px auto;
+    }
+    .team .team-content img{
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    header .top-header input{
+        display: none;
+    }
+    .banner h1{
+        font-size: 36px;
+    }
+    .banner h2{
+        font-size: 24px;
+    }
+    .team .team-content p{
+        font-size: 14px;
+    }
+    .team .team-content h3{
+        font-size: 105%;
+    }
+    .team{
+        display: inline;
+        text-align: center;
+    }
+    .team .team-content{
+        margin-bottom: 30px;
+    }
+    .team .team-content h3{
+        margin-top: 10px;
+    }
+    .phone-num, .up-arrow{
+        display: block;
+    }
+}
+@media only screen and (max-width: 575px){
+    header .top-header .logo{
+        width: 160px;
+    }
+    header .top-header form, header .top-header .search-login a{ 
+        display: none;
+    }
+    .title{
+        margin: 25px 0;
+        font-size: 215%;
+    }
+    footer .footer-links{
+        display: inline-block;
+    }
+    footer .footer-sec h4{
+        margin:10px 0;
+    }
+    footer .footer-sec li a{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+}
+@media only screen and (max-width: 479px){
+    .banner{
+        height: 400px;
+    }
+    footer{
+        padding: 15px 30px;
+    }
+    .banner{
+        height: 250px;
+    }
+    .banner h1 {
+        font-size: 30px;
+    }
+    .banner h2 {
+        font-size: 20px;
+    }
+    .banner p{
+        font-size: 15px;
+    }
+    .banner a{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .mission .mission-content {
+        margin-left: 28px;
+        margin-right: 20px;
+    }
+    .mission .mission-content a{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 359px){
+    header {
+        padding: 0 20px;
+    }
+    .banner{
+        height: 250px;
+    }
+    .title {
+        margin: 20px 0;
+        font-size: 200%;
+    }
+    .mission .mission-content p{
+        font-size: 15px;
+    }
+}

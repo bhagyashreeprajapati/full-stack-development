@@ -66,7 +66,13 @@ header ul li a{
     color: #666;
     text-transform: uppercase;
 }
-
+/* Menu button css for responsive */
+header .search-login i{
+    color:#1da2dc ;
+    margin-left: 20px;
+    font-size: 20px;
+    display: none;
+}
 /* Banner Css */
 .banner{
     background-image: url("images/banner.jpg");
@@ -74,6 +80,8 @@ header ul li a{
     background-size: cover;
     background-position: center;
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 .banner h1{
     text-transform: uppercase;
@@ -111,6 +119,8 @@ header ul li a{
     padding-bottom: 30px;
     margin-bottom: 40px;
     border-bottom: 2px solid #7d7d7d; 
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .mission .mission-content{
     margin-left: 100px;
@@ -171,6 +181,9 @@ footer .footer-links{
     justify-content: space-between;
     margin-bottom: 30px;
 }
+footer .footer-sec{
+    flex:1;
+}
 footer .footer-sec h4{
     color: #252525;
     font-weight: bold;
@@ -196,4 +209,35 @@ footer .social-icon li a{
 }
 footer .social-icon li a:hover{
     color: #666;
+}
+/* sticky icons Css */
+.phone-num{
+    position: fixed;
+    top: 40%;
+    right: 0;
+    background-color: #252525;
+    text-align: center;
+    padding: 18px;
+    transition: all 0.5s;
+    display: none;
+    z-index: 111;
+}
+.phone-num img{
+    vertical-align: middle;
+}
+.phone-num span{
+    display: none;
+    color: #0acb84;
+    margin-left: 15px;
+}
+.phone-num:hover span{
+    display: inline-block;
+    transition: all 0.5s;
+}
+.up-arrow{
+    position: fixed;
+    right: 3px;
+    bottom: 5px;
+    display: none;
+    z-index: 111;
 }
