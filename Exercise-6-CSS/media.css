@@ -69,6 +69,9 @@
     .team{
         display: inline;
         text-align: center;
+        /* we can use also */
+        /* flex-direction: column; */
+        /* row-gap: 30px; */
     }
     .team .team-content{
         margin-bottom: 30px;
