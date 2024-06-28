@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise</title>
+</head>
+<body>
+    <h1>Create a function, called getExtension(), that receives a parameter with a name of a file,
+        function getExtension(fileName) {
+            and returns the extension of the file.</h1>
+            
+            
+            <h1>create a new array with only the negative grades:</h1>
+            
+            <script>
+                //getExtension()
+                
+                function getExtension(fileName) {
+                    // //if(typeof filename === "undefined"){
+                        //     return null;
+                        // }
+                        if(!fileName){
+                            return null;
+                        }
+                        if(typeof filename === "string"){ // possible value for typesof - number, string , boolean
+                            return null;
+                        }
+                        let extension="";
+                        
+                        // let spacePosition=-1;
+                        // for (let pos=fileName.length-1; pos>=0; pos--) {
+                            //     if (fileName.charAt(pos)===".") {
+                                //         spacePosition=pos;
+                                //         break;
+                                //     }
+                                // }
+                                
+                                let spacePosition2=fileName.lastIndexOf(".");
+                                if(spacePosition2===-1){
+                                    return null;
+                                }
+                                // console.log(spacePosition + " / "+ spacePosition2);
+                                
+                                // extension = fileName.substring([spacePosition2]); // .txt
+                                extension = fileName.substring([spacePosition2+1]); // txt
+                                return extension;
+                                
+                            }
+                            
+                            console.log(getExtension("test.txt"));
+                            console.log(getExtension("test.pdf"));
+                            console.log(getExtension(""));
+                            // console.log(getExtension(123));
+                            // console.log(getExtension("test"));
+                            console.log(getExtension("test.trz.gz"));
+                            
+                            
+                            
+                            ///create a new array with only the negative grades:
+                            let grades = [ 12, 18, -5, -9, 11, 10, -8, 0, 17 ];
+                            let results=[];
+                            for (let i = 0; i < grades.length; i++) {
+                                if (grades[i] < 0) {
+                                    results.push(grades[i])
+                                    // // Printing output
+                                    // let res = grades[i];
+                                    // // grades[i];
+                                }
+                            }
+                            console.log(results);
+                            // let res = grades.filter(number => number < 0);
+                            
+                            // // Printing output
+                            // console.log(res);
+
+
+                            // for (let grade of grades){
+                            //     if(grade<0){
+                            //         results.push(grade);
+                            //     }
+                            // }
+                            // console.log(results);
+                        </script>
+                    </body>
+                    </html>

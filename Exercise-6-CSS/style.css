@@ -215,6 +215,7 @@ footer .social-icon li a:hover{
     position: fixed;
     top: 40%;
     right: 0;
+    /* right: -145px; */
     background-color: #252525;
     text-align: center;
     padding: 18px;
@@ -227,12 +228,16 @@ footer .social-icon li a:hover{
 }
 .phone-num span{
     display: none;
+    /* transform: translateX(145px); */
     color: #0acb84;
     margin-left: 15px;
+    /* width: 0; */
 }
 .phone-num:hover span{
     display: inline-block;
     transition: all 0.5s;
+    /* width: auto; */
+    right: 0;
 }
 .up-arrow{
     position: fixed;

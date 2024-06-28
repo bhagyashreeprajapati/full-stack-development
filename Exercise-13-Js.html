@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise</title>
+</head>
+<body>
+    <h1>Remove the repeated numbers inside an array.</h1>
+    <script>
+        
+        // let array = [12,6,3,12,8,6,5,5];
+        // function removeDuplicates(arr){
+            //     let b=[];
+            //     for(let i=0; i<array.length; i++){
+                //         if(b.indexOf(array[i]!==-1)){
+                    //             b.push(array);
+                    //         }
+                    //         return b;
+                    //     }
+                    // }
+                    
+                    
+                    function removeDuplicatesnumber(arr) {
+                        for (let i = 0; i < arr.length; i++) {
+                            for (let j = i + 1; j < arr.length; j++) {
+                                if (arr[i] === arr[j]) {
+                                    arr.splice(j, 1);
+                                    j--;
+                                }
+                            }
+                        }
+                        return arr;
+                    }
+                    
+                    let array = [12,6,3,12,8,6,5,5];
+                    console.log(removeDuplicatesnumber(array));
+                    
+                    /// using splice method differently
+                    
+                    // function removeDuplicates(array) {
+                    //     array.sort((a, b) => a - b);
+                    //     for (let i = array.length - 1; i >= 0; i--) {
+                    //         if (array[i] === array[i + 1]) {
+                    //             array.splice(i, 1);
+                    //         }
+                    //     }
+                    //     return array;
+                    // }
+                    
+                    // let originalArray = [12, 6, 3, 12, 8, 6, 5, 5];
+                    // let arrayNoDuplicates = [...originalArray];
+                    
+                </script>
+                
+                
+                <h1>Create an array that receives two arrays, and merges them, taking values alternatively from each one.</h1>
+                
+                <!-- <script>
+                    function mergeAlternating(values1, values2) {
+                        let mergedArray = [];
+                        let maxLength = Math.max(values1.length, values2.length);
+                        
+                        for (let i = 0; i < maxLength; i++) {
+                            if (i < values1.length) {
+                                mergedArray.push(values1[i]);
+                            }
+                            if (i < values2.length) {
+                                mergedArray.push(values2[i]);
+                            }
+                        }
+                        
+                        return mergedArray;
+                    }
+                    
+                    // Example usage
+                    let values1 = ["a", "b", "c"];
+                    let values2 = ["x", "y", "z"];
+                    const result = mergeAlternating(values1, values2);
+                    
+                    console.log(result); 
+                </script> -->
+            </body>
+            </html>

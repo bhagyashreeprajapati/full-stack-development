@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise</title>
+</head>
+<body>
+    <h1>Create an extension, validateExtension(), that receives, as a parameter, the name of a file, and that determines if the filename extension is valid – it should return true or false.</h1>
+    
+    <script>
+        function getExtension(fileName) {
+            if (!fileName || typeof fileName !== "string") {
+                return null;
+            }          
+            let spacePosition2=fileName.lastIndexOf(".");
+            if (spacePosition2===-1) {
+                return null;    
+            }
+            return fileName.substring([spacePosition2+1]);
+        }
+        
+        function validateExtension(fileName) {
+            let validExtensions=["docx","xlsx","png"];
+            let extension=getExtension(fileName);
+            if (extension===null) {
+                return false;
+            } else {
+                // solution 1
+                // for (let pos=0; pos<validExtensions.length; pos++) {
+                    //     if (extension===validExtensions[pos]) {
+                        //         return true;
+                        //     }
+                        // }
+                        // return false;
+                        
+                        // solution 2
+                        // if (validExtensions.indexOf(extension)!==-1) {
+                            // if (validExtensions.includes(extension)===true) {
+                                // if (validExtensions.includes(extension)) {
+                                    //     return true;
+                                    // } else {
+                                        //     return false;
+                                        // }
+                                        
+                                        // solution 3
+                                        // return (validExtensions.indexOf(extension)!==-1) ? true : false;
+                                        return validExtensions.includes(extension);
+                                    }
+                                }
+                                console.log(validateExtension("test.docx")); // true
+                                console.log(validateExtension("test.png")); // true
+                                console.log(validateExtension("test.jpg")); // false
+                                console.log(validateExtension("test")); // false
+                                
+                                
+                            </script>
+                            
+                            
+                            <script>
+                                let countriesInfo=[];
+                                countriesInfo.push("Germany","Portugal","India","Croatia");
+                                console.log(countriesInfo);
+                                console.log(countriesInfo[2]);
+                                
+                                let cities=[]; // array of arrays
+                                cities.push(["Hamburg","Hannover","Berlin"]); // 0
+                                cities.push(["Porto","Lisboa","Coimbra","Braga"]); // 1
+                                cities.push(["Calcutta","Bangaluru","Gujarat"]); // 2
+                                //             [0]        [1]         [2]
+                                cities.push(["Split","Zagreb","Dubrovnik"]);
+                                console.log(cities);
+                                console.table(cities);
+                                
+                                console.log(cities[2][2]);// number of the array and in the array number
+                            </script>
+                            
+                        </body>
+                        </html>

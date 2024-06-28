@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise</title>
+</head>
+<body>
+    <h1>Create a function, removeElements(), that locates and removes elements from an array:</h1>
+    
+    <!-- <script>
+        let names=["Pedro", "Miriam", "Usha", "Bhagyashree", "Jasmina", "Anna"];
+        
+        function removeElements(name) {
+            for (let i = names.length - 1; i >= 0; i--) {
+                if (names[i] === name) {
+                    names.splice(i, 1);
+                }
+            }
+        }
+        removeElements("Pedro");
+        console.log(names);
+        
+    </script> -->
+    
+    <h1>Create a function, countLetterOccurrences(), that returns the number of occurrences of a letter inside a text.</h1>
+    <script>
+        function countLetterOccurrences(text, letterToFind) {
+            let count = 0;
+            
+            // looping through the items
+            for (let i = 0; i < text.length; i++) {//for(let i of text)
+                
+                // check if the character is at that position
+                if (text.charAt(i).toUpperCase() === letterToFind.toUpperCase()) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        let text="To be or not to be";
+        console.log(countLetterOccurrences(text,"t")); //3
+        console.log(countLetterOccurrences(text,"o")); //4
+        console.log(countLetterOccurrences(text,"s")); //0
+    </script>
+</body>
+</html>

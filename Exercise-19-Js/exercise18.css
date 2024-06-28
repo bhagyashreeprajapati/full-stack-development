@@ -1,0 +1,12 @@
+p{
+    font-size: 18px;
+    color: #000;
+    display: inline-block;
+}
+ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+ul li.clicked i{
+    color: gold;
+}

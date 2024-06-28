@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise</title>
+</head>
+<body>
+    <h1>Given an array of temperatures,
+        let temperatures=[ 12, 34, 45, 3, 8, 23, 56 ];
+        calculate the minimum, maximum and average temperatures.
+    </h1>
+    
+    <script>
+        // Given an array of temperatures,
+        // let temperatures=[ 12, 34, 45, 3, 8, 23, 56 ];
+        // calculate the minimum, maximum and average temperatures.
+
+        let temperatures=[ 12, 34, 45, 3, 8, 23, 56 ];
+
+        // let maxTemp=temperatures[0];
+        // let minTemp=temperatures[0];
+        // for (let i=1; i<temperatures; i++) {
+
+        let maxTemp=-Infinity;
+        let minTemp=Infinity;
+        let sumTemp=0;
+        for (let i=0; i<temperatures.length; i++) {
+            sumTemp+=temperatures[i];
+            if (temperatures[i]>maxTemp) {
+                maxTemp=temperatures[i];
+            }
+            if (temperatures[i]<minTemp) {
+                minTemp=temperatures[i];
+            }
+        }
+        console.log("Minimum temperature="+minTemp); // 3
+        console.log(`Maximum temperature=${maxTemp}`); // 56
+        let avgTemp=sumTemp/temperatures.length;
+        console.log(`Average temperature=${avgTemp}`); // 25.857142857142858
+        console.log(`Average temperature=${Math.floor(avgTemp)}`); // 25
+        console.log(`Average temperature=${Math.round(avgTemp)}`); // 26
+        console.log(`Average temperature=${Math.ceil(avgTemp)}`); // 26
+        console.log(`Average temperature=${avgTemp.toFixed(2)}`); // 25.86
+
+        console.log(temperatures); // [12, 23, 3, 34, 45, 56, 8]
+
+        // [ 12, 34, 45, 3, 8, 23, 56 ];
+        // temperatures.sort(function(a,b) {
+        //     if (a<b) {
+        //         return -1;
+        //     }
+        //     if (a>b) {
+        //         return 1;
+        //     }
+        //     if (a===b) {
+        //         return 0;
+        //     }
+        // });
+
+        // => arrow function
+        temperatures.sort((a,b) => { return a-b });
+        // ascending order
+        // temperatures.sort((a,b) => a-b);
+        // descending order
+        // temperatures.sort((a,b) => b-a);
+        console.log(temperatures); // [3, 8, 12, 23, 34, 45, 56]
+
+        function maxTemp2(temperatures) {
+            let maxTemp = temperatures[0];
+            for(let i = 1; i < temperatures.length; i++) {
+                if (temperatures[i] > maxTemp) {
+                    maxTemp = temperatures[i];
+                }
+            }
+            return maxTemp;
+        }
+
+        function sortTemp(temperatures) {
+            let sortedTemperatures = [];
+            let unsortedTemperatures = temperatures.slice(0);
+
+            // unsortedTemperatures [ 12, 3, 8, 23 ];
+            // sortedTemperatures [ 34, 45, 56 ]
+
+            while(unsortedTemperatures.length>0) {
+                sortedTemperatures.unshift(maxTemp2(unsortedTemperatures));
+                unsortedTemperatures.splice(unsortedTemperatures.indexOf(maxTemp2(unsortedTemperatures)), 1);
+            }
+
+            return sortedTemperatures;
+        }
+        console.log(sortTemp(temperatures)); // [3, 8, 12, 23, 34, 45, 56]
+
+        let temperatures2=[ 12, 34, 45, 3, 8, 23, 56 ];
+        // let maxTemperatures2=Math.max(temperatures2); // NaN - Not a Number
+        // let maxTemperatures2=Math.max(12, 34, 45, 3, 8, 23, 56); // 56
+        // ... - spread operator - converts an array to a list of values
+        let maxTemperatures2=Math.max(...temperatures2);
+        console.log(maxTemperatures2); // 56
+        let minTemperatures2=Math.min(...temperatures2);
+        console.log(minTemperatures2); // 3
+
+         // Next, calculate the median (it may be thought of as the “middle" value) by following these rules:
+        // If the data set has an odd number of observations, the middle one is selected.
+        // If the data set has an even number of observations, there is no distinct middle value and the median is usually defined to be the arithmetic mean of the two middle values.
+        // Test the code by adding another temperature to the end of the array so you have an even number of elements.
+
+        // [3, 8, 12, 23, 34, 45, 56]
+        // [3, 8, 12, 23, 28, 34, 45, 56]
+        function medianTemp(temperatures) {
+            let median = "";
+            if(temperatures.length % 2 !== 0) { // if it is an odd number of elements
+                // median = temperatures[(Math.ceil(temperatures.length / 2))-1];
+                median = temperatures[Math.floor(temperatures.length / 2)];
+            } else {
+                // if it is an even number of elements
+                median = (temperatures[(temperatures.length / 2)-1] + temperatures[Math.floor(temperatures.length / 2)]) / 2;
+            }
+            return median;
+        }
+        console.log("Median Temp: " + medianTemp(temperatures)); // 23
+        console.log("Median Temp: " + medianTemp([3, 8, 12, 23, 28, 34, 45, 56])); // 25.5
+
+        </script>
+    </body>
+    </html>

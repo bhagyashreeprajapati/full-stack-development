@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js - Hangman Game</title>
+</head>
+<body>
+    
+    <center><h1>Hangman Game</h1></center>
+    <script>
+        // create a list of words
+let words = [
+    "flower",
+    "awkward",
+    "subway",
+    "whiskey",
+    "kiwifruit",
+    "enthusiastic",
+    "zigzag",
+    "wristwatch",
+    "playground",
+    "summer",
+    "aaaaaa",
+    "jellyfish",
+    "schoolbus",
+    "massage",
+    "yogamat",
+  ];
+
+// generate a random value to choose a word
+// let randomWord=words[Math.floor(Math.random()*words.length)];
+let randomNumber=Math.floor(Math.random()*words.length);
+let randomWord=words[randomNumber];
+console.log(randomWord);
+
+// generate the result array/string
+// awkward = _ _ _ _ _ _ _
+// let result=new Array(randomWord.length).fill('_');
+let result=Array.from({ length: randomWord.length }).fill('_');
+// let result=[];
+// let pos=0;
+// while (pos<randomWord.length) {
+//     result.push("_");
+//     pos++;
+// }
+console.log(result.join(" "));
+
+// keep asking the user for letters till he/she has found the word or reached the limit of wrong tries.
+
+let wrongTries=3;
+let allowedCharacters="ABCDEFGHIJKLMNOPQRSTUVWYZ";
+let guessedWord=false; // flag variable
+// while (true) {
+while(!guessedWord && wrongTries>0) {
+    let guessedLetter=false;
+    let userLetter=prompt("Give me a letter (press Cancel or Esc to get out of the game): ");
+    // console.log(userLetter);
+    if (userLetter===null) {
+        break;
+    }
+    // if (userLetter==="") {
+    if (userLetter.length!==1) {
+        alert("You must provide a single letter!");
+    } else {
+        // regex for email validation
+        // /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        // 4445-321 - /^[0-9]{4}-[0-9]{3}$/
+        // regular expressions - regex
+        let re=/^[A-Za-z]{1}$/;
+        // if (!allowedCharacters.includes(userLetter.toUpperCase())) {
+        if (!re.test(userLetter)) {
+            alert("You must provide a letter!");
+        } else {
+            for (let pos=0; pos<randomWord.length; pos++) {
+                if (randomWord[pos]===userLetter) {
+                    result[pos]=userLetter;
+                    guessedLetter=true;
+                }
+            }
+            if (result.join("")===randomWord) {
+                // break;
+                guessedWord=true;
+            }
+            // if (guessedLetter===false)
+            if (!guessedLetter) {
+                wrongTries--;
+                alert(`The letter you provided is not in the word. You still have ${wrongTries} ${ wrongTries!==1 ? 'tries' : 'try' }.`);
+            }
+            console.log(result.join(" "));
+        }
+    }
+}
+if (guessedWord) {
+    alert("You have guessed the word!")
+} else {
+    if (wrongTries!==0) {
+        alert("Sad to see you leave!")
+    } else {
+        alert(`You DIDN'T guessed the word! The correct word was '${randomWord}'`);
+    }
+}
+
+
+    </script>
+</body>
+</html>

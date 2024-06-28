@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sort an array of objects by name:</h1>
+    <script>
+        // Sample array of objects
+        let students=[
+        {
+            name: "Usha",    
+            country: "India",  
+        },
+        
+        {
+            name: "Anna",
+            
+            country: "Germany"
+            
+        },
+        
+        {
+            
+            name: "Jasmina",
+            
+            country: "Croatia"
+            
+        },
+        
+        {
+            
+            name: "Baghyashree",
+            
+            country: "India"
+            
+        },
+        
+        {
+            
+            name: "Miriam",
+            
+            country: "Germany"
+            
+        }
+        
+        ]
+        // solution ------- 1
+        // students.sort(function(students1, students2){
+        //     if(students1.name<students2.name){
+        //         // don't swap the elements
+        //         return -1; 
+        //     }
+        //     if(students1.name>students2.name){
+        //         //swap the elements
+        //         return 1; 
+        //     }
+        // });
+        // solution ------- 2
+        // Function to sort the array by name
+        //students.sort((a, b) also can use
+        // students.sort((students1, students2) => {
+        //     if (students1.name < students2.name) {
+        //        return -1;  // don't swap the elements
+        //     }
+        //     if (students1.name > students2.name) {
+        //        return 1;  // swap the elements
+        //     }
+        //     return 0;
+        // });
+        // solution ------- 3
+        // one line code
+        // students.sort((students1, students2) => (students1.name<students2.name) ? -1 : 1);
+        // // Output the sorted array
+        // console.log(students);
+
+        students.sort((students1, students2) => (students1.country<students2.country) ? -1 : 1);
+        console.log(students);
+
+/// fuction is define
+        function add(a,b){
+            let sum=a+b;
+            return sum;
+        }
+        console.log(add(3,8)); //11
+        // fuction expression
+        let add2=function add(a,b){
+            // anonymose fuction
+            let sum=a+b;
+            return sum;
+        }
+        console.log(add2(3,8)); //11
+
+
+        // arrow fuction same as a soluion 2
+        let add3=(a,b) => {
+            // anonymose fuction
+            return a+b;
+        }
+        console.log(add3(3,8)); //11
+
+        let add4=(a,b) => a+b;
+        console.log(add4(3,8)); //11
+
+        // different method
+        let square = number => number*number
+        console.log(square(3));//9
+        console.log(3**2);//9
+        console.log(Math.pow(3,2));//9
+
+        let randommess=()=>console.log("Random message type");
+        console.log(randommess());
+
+        let randommessage=()=>{
+            let message=["message1", "message2", "message3", "message4"];
+            let randomposi=randomnumber(message.length);
+            console.log(message[randomposi]);
+        }
+        console.log(randommessage());
+        console.log(randommessage());
+        console.log(randommessage());
+        console.log(randommessage());
+    </script>
+</body>
+</html>
